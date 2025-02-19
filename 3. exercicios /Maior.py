@@ -4,6 +4,7 @@ os.system("clear")
 
 
 
+
 # Solicitar ao usuário um valor
 valor = int(input("Digite um valor"))
 
