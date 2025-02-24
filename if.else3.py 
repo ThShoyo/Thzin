@@ -1,0 +1,16 @@
+import os
+os.system("clear")
+
+
+
+valor = int(input("Digite um valor"))
+valor2 = int(input("Digite um valor"))
+valor3 = int(input("Digite um valor"))
+media = float
+
+media = (valor + valor2 + valor3) / 3
+
+if media >= 7:
+    print(media, "Aprovado")
+else:
+    print(media,"Reprovado")
