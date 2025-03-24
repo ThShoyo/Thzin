@@ -8,7 +8,7 @@ os.system("clear")
 
 
 # Entrada
-primeiro_numero
+primeiro_numero =
 operador = input("Digite a operaçao que deseja(+ - * /): ")
 segundo_numero = int(input("Digite um número: "))
 
