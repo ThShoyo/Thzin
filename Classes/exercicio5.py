@@ -22,6 +22,14 @@ class Pessoa:
               f"\tNúmero: {self.endereco.numero} \n"
               f"\tCidade: {self.endereco.cidade}")
 
+nome = input("Digiter seu nome ")
+email = input("Digite seu email ")
+logradouro = input("Digite seu endereço ")
+numero = input("Digite o número da sua residência ")
+cidade = input("Digite o nome da cidade ")
 
+endereco1 = Endereco(logradouro, numero, cidade)
+pessoa1 = Pessoa(nome, email, endereco1)
 
-
+print("\nDados da pessoas: ")
+pessoa1.exibir_dados()
