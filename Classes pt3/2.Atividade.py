@@ -16,6 +16,7 @@ class Pessoas:
 lista_de_pessoas = []
 QUANTIDADE_PESSOAS = 5
 
+print("= Solicitando dados =")
 for i in range(QUANTIDADE_PESSOAS):
     pessoas = Pessoas(
                     nome=input("Digite o nome do paciente: "),
@@ -29,8 +30,17 @@ for i in range(QUANTIDADE_PESSOAS):
 print("n= Salvando dados =")
 nome_arquivo = "Funcionarios.txt"
 with open(nome_arquivo, "a") as arquivo:
-    for livro in lista_de_pessoas:
-        arquivo.write(f"Título: {livro.titulo}, {livro.ano}, {livro.autor.nome}")
+    for pessoas in lista_de_pessoas:
+        arquivo.write(f"Título: {pessoas.nome}, {pessoas.data_de_nascimento}, {pessoas.RG}, {pessoas.CPF}\n")
+      
+print("\n= Dados salvos com sucesso = ")
+
+print("\n= Exibindo dados do arquivo =")
+
+nome_arquivo = "Funcionarios.txt"
+with open(nome_arquivo, "a") as arquivo:
+    for pessoas in lista_de_pessoas:
+        arquivo.write(f"Título: {pessoas.nome}, {pessoas.data_de_nascimento}, {pessoas.RG}, {pessoas.CPF}\n")
       
 print("\n= Dados salvos com sucesso = ")
 

@@ -19,7 +19,7 @@ class Livro:
 
 lista_de_livros = []
 
-print("= Solicitando dados para o usário =")
+print("= Solicitando dados =")
 
 livro = Livro(
         titulo=input("Digite o título do livro: "),
