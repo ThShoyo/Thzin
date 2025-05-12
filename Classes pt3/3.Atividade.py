@@ -1,7 +1,7 @@
 import os 
 from dataclasses import dataclass
 
-os.system("clear || clear")
+os.system("cls || clear")
 
 @dataclass
 class Funcionario:
