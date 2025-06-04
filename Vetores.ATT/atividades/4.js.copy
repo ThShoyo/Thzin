@@ -1,0 +1,14 @@
+const readline = require('readline-sync')
+
+const listaDeNumeros = []
+
+for (let  i = 1; i <= 5; i++) {
+    let numero = readline.questionFloat(`Digite on ${i}º número: `)
+    listaDeNumeros.push(numero)
+}
+
+const negativos = listaDeNumeros.filter(n => n < 0)
+const positivos = listaDeNumeros.filter(n => n > 0).reduce((soma, total ) => soma +total, 0)
+
+console.log(`\nQuantidades de negativos: ${negativos.length}`)
+console.log(`Soma de positivos: ${positivos}`)
