@@ -1,0 +1,157 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, rgba(255, 64, 129, 0.8), rgba(108, 99, 255, 0.8)); /* Gradiente radial para um fundo super dinâmico */
+    color: #fff; /* Texto branco para contrastar com o fundo vibrante */
+    padding: 0;
+    margin: 0;
+    height: 100vh; /* Preenche toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Alinha o conteúdo ao centro */
+    animation: glowing-background 5s infinite alternate; /* Efeito de fundo brilhante que muda suavemente */
+    box-sizing: border-box;
+}
+
+/* Animação de fundo que brilha e muda de cor */
+@keyframes glowing-background {
+    0% {
+        background: radial-gradient(circle, rgba(255, 64, 129, 0.8), rgba(108, 99, 255, 0.8));
+    }
+    50% {
+        background: radial-gradient(circle, rgba(255, 255, 0, 0.8), rgba(0, 255, 255, 0.8));
+    }
+    100% {
+        background: radial-gradient(circle, rgba(0, 255, 0, 0.8), rgba(255, 0, 255, 0.8));
+    }
+}
+
+/* Seção de conteúdo */
+h1, p {
+    font-size: 36px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8); /* Sombra de texto intensa para dar mais destaque */
+}
+
+/* Efeito de desfoque para o fundo */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Sombra escura para dar um efeito de desfoque */
+    z-index: -1;
+    filter: blur(8px); /* Desfoque no fundo para dar foco ao conteúdo */
+}
+
+
+/* Containers */
+.notas-container, .media-container {
+    background-color: #ff4081; /* Cor de fundo chamativa */
+    border-radius: 25px; /* Borda super arredondada */
+    padding: 50px;
+    max-width: 480px;
+    width: 100%;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); /* Sombra dramática */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: 5px solid #ffec40; /* Borda grossa e dourada */
+    background: linear-gradient(45deg, #ff4081, #ffec40); /* Gradiente colorido */
+    animation: glow 2s infinite alternate; /* Animação de brilho */
+}
+
+.notas-container:hover, .media-container:hover {
+    transform: translateY(-15px); /* Efeito de flutuação forte */
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25); /* Sombra mais intensa */
+}
+
+/* Titles & Text */
+.notas, .media {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Efeito de sombra no texto */
+    letter-spacing: 2px; /* Maior espaçamento entre letras */
+}
+
+/* Inputs */
+input { 
+    width: 10%;
+    padding: 18px;
+    font-size: 20px;
+    border: 3px solid #ffec40; /* Borda amarela brilhante */
+    border-radius: 20px; /* Bordas bem arredondadas */
+    margin-top: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #2f2f2f;
+    transition: all 0.3s ease-out; /* Transição para foco */
+    box-shadow: 0 0 10px rgba(255, 236, 64, 0.5); /* Brilho leve */
+
+}
+
+input:focus { 
+    border-color: #ff4081; /* Cor vibrante para foco */
+    outline: none;
+    background-color: #ff4081; /* Fundo vibrante ao focar */
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.8); /* Efeito de brilho mais forte no foco */
+}
+
+/* Button */
+button { 
+    width: 100%;
+    padding: 18px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffec40; /* Botão dourado */
+    color: #2f2f2f;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+    margin-top: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+button:hover { 
+    background-color: #ff4081; /* Cor vibrante ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de flutuação no botão */
+    box-shadow: 0 5px 20px rgba(255, 64, 129, 0.7); /* Sombra intensa */
+}
+
+button:active { 
+    transform: translateY(2px); /* Efeito de pressionar */
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 30px rgba(255, 64, 129, 0.6), 0 0 60px rgba(255, 64, 129, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 60px rgba(255, 64, 129, 0.8), 0 0 100px rgba(255, 64, 129, 1);
+    }
+}
+
+/* Media Query para Responsividade */
+@media (max-width: 600px) {
+    .notas-container, .media-container {
+        padding: 30px;
+        margin: 10px;
+    }
+
+    input, button {
+        padding: 16px;
+        font-size: 18px;
+    }
+}
+
